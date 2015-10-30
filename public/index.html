@@ -1,0 +1,66 @@
+<!DOCTYPE html>​
+​<html lang="en" ng-app="myApp">​
+​<head>​
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/index_style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+	<script type="text/javascript" src="/app.js"></script>​
+	<script type="text/javascript" src='/js/factories/main.js'></script>​
+	<script type="text/javascript" src='/js/factories/chef.js'></script>​
+	<script type="text/javascript" src='/js/factories/event.js'></script>​
+	<script type="text/javascript" src='/js/factories/diner.js'></script>​
+	<script type="text/javascript" src='/js/controllers/mains.js'></script>​
+	<script type="text/javascript" src='/js/controllers/chefs.js'></script>​
+	<script type="text/javascript" src='/js/controllers/diners.js'></script>​
+	<script type="text/javascript" src='/socket.io/socket.io.js'></script>​
+
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript">
+
+	var lat = 34.0500;
+	var longt = 241.7570;
+	var myCenter=new google.maps.LatLng( lat,longt);
+
+			function initialize()
+			{
+			var mapProp = {
+				center:myCenter,
+				zoom:12,
+				mapTypeId:google.maps.MapTypeId.ROADMAP
+				};
+
+			var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+			var marker=new google.maps.Marker({
+				position:myCenter,
+				});
+
+			marker.setMap(map);
+
+			var infowindow = new google.maps.InfoWindow({
+				content:"Your Event Here!"
+				});
+
+			google.maps.event.addListener(marker, 'click', function() {
+			infowindow.open(map,marker);
+			});
+			}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+	<title>Air D&D</title>​
+
+​</head>​
+
+​<body>​
+	<!-- newest -->
+	<div class='error' ng-model='errors'>{{error.errors.name}}</div>
+
+	<div ng-view=""></div>​
+	<script type="text/javascript">
+		var socket = io.connect();
+	</script>
+​</body>​
+​</html>

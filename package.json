@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "body-parser":          "latest",
+    "express":              "latest",
+    "express-session":      "latest",
+    "mongoose":             "latest",
+    "mongoose-validator":   "latest",
+    "mysql":                "latest",
+    "socket.io":            "latest"
+  }
+}
