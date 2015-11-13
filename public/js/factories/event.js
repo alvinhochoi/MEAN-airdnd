@@ -15,7 +15,6 @@ app.factory('EventFactory', function($http){
 	}
 
 	factory.updateEvent = function(eventInfo, callback){
-		console.log('fac', eventInfo);
 		$http.post('/eventEdit/'+ eventInfo._id, eventInfo).success(function(response){
 			event = response;
 			callback();
@@ -23,7 +22,6 @@ app.factory('EventFactory', function($http){
 	}
 
 	factory.getOneEvent = function(event, callback){
-		// console.log('fac',event);
 		$http.get('/events/' + event.id).success(function(response){
 			callback(response);
 		})
@@ -35,7 +33,7 @@ app.factory('EventFactory', function($http){
 		})
 	}
 	factory.destroy = function(event, callback){
-		$http.delete('/events/'+ event._id, event).success(function(){
+		$http.delete('/events/'+ event._id).success(function(response){
 			callback();
 		});
 	}

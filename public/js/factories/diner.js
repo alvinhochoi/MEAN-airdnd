@@ -4,14 +4,12 @@ app.factory('DinerFactory', function($http){
 
 
 factory.addDiner = function(newDiner, callback) {
-  console.log('fac',newDiner);
   $http.post('/diner', newDiner).success(function(response){
     callback(response);
   })
 }
 
 factory.logDiner = function(diner, callback) {
-  console.log('fact',diner);
   $http.post('/logdiner', diner).success(function(response){
     callback(response);
   })

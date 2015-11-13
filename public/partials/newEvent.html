@@ -1,35 +1,20 @@
 <style media="screen">
+
 .covered{
     background-image: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQYzBCja2SGv3HOO0Rxrotpv7ouWgj6o5Gr9WssMLaObwW5kzlqrw);
-    background-size: 100% 100%;
+    background-size: cover;
+    min-height: 900px;
 }
+
 div.lastly{
-    height: 800px;
-    width: 1200px;
+    min-height: 850px;
     background-color: lightgray;
     opacity: 0.85;
     border-radius: 20px;
-    border:2px solid black;
+    border: 2px solid black;
     padding: 10px;
 }
-div.upper_bar{
-    height: 60px;
-    width: 100%;
-    background-color: black;
-}
-#leaver{
-    display: inline-block;
-    float: right;
-    border-radius: 24px;
-    margin-left: 15px;
-    position: relative;
-    right: 220px;
-    top: 15px;
-}
-div.container{
-    width: 1200px;
-    height: 1000px
-}
+
 div.form-group{
     height: 500px;
     width: 500px;
@@ -38,66 +23,69 @@ div.form-group{
     vertical-align: top;
     margin-left: 60px;
 }
+
 div.form-group p{
     margin-left: 100px;
     margin-top: 30px;
 }
+
 div.okay{
     height: 60px;
     width: 400px;
     margin-top: 40px;
     margin-left: 150px;
 }
+
 #part2{
     margin-left: 80px;
     margin-top: -1px;
 }
+
 #clicked{
     margin-left: 50px;
 }
+
 #linked, #clicked{
     display: inline-block;
     vertical-align: top;
 }
+
 #linked{
     margin-top: 10px;
 }
 
 </style>
 <div class='covered'>
-    <div class='upper_bar'>
-              <button id='leaver' class= 'btn btn-success'><a href="#/">Logout</a></button>
-          </div>
-        <div class='container'>
-<a href="#/chef_dashboard">Back to Mainpage</a>
-<div class='lastly'>
-<h2>Create a New Event</h2>​
+    <div class='container'>
+        <a href="#/chef_dashboard">Back to Mainpage</a>
+        <div class='lastly'>
+            <h2>Create a New Event</h2>​
 
-<form class="form-horizontal" role="form">​
-    <div class="form-group">​
-        <p>Event Title: <input type='text' ng-model='newEvent.title' required/></p>
-        <p>Chef Name: <input type='text' ng-model='newEvent.name' required/></p>
-        <p>Cuisine Type: <input type="text" ng-model='newEvent.cuisine' required/></p>
-        <p>Event Date: <input type='date' ng-model='newEvent.date' required/></p>
-        <p>Event Time: <input type='time' ng-model='newEvent.time' required/></p>
-        <p>Location: <input type="text" ng-model='newEvent.location' required/></p>
-        <p>Number of Guests: <input text="number" ng-model='newEvent.guests' required/></p>
-        <p>Price(per person): $<input type='number' ng-model='newEvent.price' required/></p>
+            <form class="form-horizontal" role="form">​
+                <div class="form-group">​
+                    <p>Event Title: <input type='text' ng-model='newEvent.title' required/></p>
+                    <p>Chef Name: <input type='text' ng-model='newEvent.name' required/></p>
+                    <p>Cuisine Type: <input type="text" ng-model='newEvent.cuisine' required/></p>
+                    <p>Event Date: <input type='date' ng-model='newEvent.date' required/></p>
+                    <p>Event Time: <input type='time' ng-model='newEvent.time' required/></p>
+                    <p>Location: <input type="text" ng-model='newEvent.location' required/></p>
+                    <p>Number of Guests: <input text="number" ng-model='newEvent.guests' required/></p>
+                    <p>Price(per person): $<input type='number' ng-model='newEvent.price' required/></p>
+                </div>
+                <div id='part2' class="form-group">​
+                    <p>Event Description:</p>
+                    <p><textarea ng-model='newEvent.description' rows="8" cols="40" required></textarea></p>
+                    <p>Menu:</p>
+                    <p><textarea ng-model='newEvent.menu' rows="8" cols="40" required/></textarea></p>
+                    <p>Duration: <input type='number' ng-model='newEvent.duration' required/></p>
+                    <p>Event Pic: <input type='text' ng-model='newEvent.url'></p>
+                    <p>Profile Pic: <input type='text' ng-model='newEvent.pic'></p>
+                </div>
+                <div class='okay'>
+                    <a id='linked' href="#/chef_dashboard">Cancel</a>
+                    <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.addEvent(newEvent);">Create Event</button>​​
+                </div>​
+            </form>​
+        </div>
     </div>
-    <div id='part2' class="form-group">​
-        <p>Event Description:</p>
-        <p><textarea ng-model='newEvent.description' rows="8" cols="40" required></textarea></p>
-        <p>Menu:</p>
-        <p><textarea ng-model='newEvent.menu' rows="8" cols="40" required/></textarea></p>
-        <p>Duration: <input type='number' ng-model='newEvent.duration' required/></p>
-        <p>Event Pic: <input type='text' ng-model='newEvent.url'></p>
-        <p>Profile Pic: <input type='text' ng-model='newEvent.pic'></p>
-    </div>
-    <div class='okay'>
-        <a id='linked' href="#/chef_dashboard">Cancel</a>
-        <button id='clicked' type="submit" class="btn btn-success" ng-click="chefCtrl.addEvent(newEvent);">Create Event</button>​​
-    </div>​
-</form>​
-</div>
-</div>
 </div>

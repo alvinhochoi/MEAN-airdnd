@@ -1,40 +1,28 @@
 <div class='head_bar'>
-					<h1>Welcome! Let's get cookin'!</h1>
-							<button id='leaving' class= 'btn btn-danger'><a href="/"></a>Logout</button>
-							<a class='btn btn-info pull-right' id='create_new' href='#/newEvent'>Create New Event</a>
-			</div>
-	<div class='container'>
+	<h1>Welcome! Let's get cookin'!</h1>
+	<a class='btn btn-info pull-right' id='create_new' href='#/newEvent'>Create New Event</a>
+</div>
 
-		<div class="bio_location">
-			<form>
-				<h3>Enter a Profile Biography:</h3>
-				<p><textarea class='bio_spot' ng-model='chefCtrl.chef.bio' rows='8' cols='70'>{{ chefCtrl.chef.bio }}</textarea></p>
-				<h4>Location:</h4>
-				<p><input class='loc' type='text' ng-model='chefCtrl.chef.location'/></p>
-				<p><input id='clicker' type='submit' class='btn btn-success' value='Save Changes' ng-click='chefCtrl.updateInfo(chefCtrl.chef)' />
-				<h4 class='affirm' ng-show='chefCtrl.save == true' style='color: blue;'>Changes saved</h4>
+<div class='container'>
 
-				</p>
-			</form>
+	<div class="bio_location">
+		<form>
+			<h3>Enter a Profile Biography:</h3>
+			<p><textarea class='bio_spot' ng-model='chefCtrl.chef.bio' rows='8' cols='70' style='padding: 10px'>{{ chefCtrl.chef.bio }}</textarea></p>
+			<h3>Location:</h3>
+			<p><input class='loc' type='text' ng-model='chefCtrl.chef.location'/></p>
+			<p><input id='clicker' type='submit' class='btn btn-success' value='Save Changes' ng-click='chefCtrl.updateInfo(chefCtrl.chef)' />
+			<h4 class='affirm' ng-show='chefCtrl.save == true'>Changes saved</h4>
+			</p>
+		</form>
+	</div>
+	<div class='upcoming'>
+		<h3>Your upcoming events:</h3><hr>
+		<div class='eventList' ng-repeat='event in chefCtrl.events | orderBy: "date"'>
+			<p><a href='#/chef_one_event/{{ event._id }}'>{{ event.title }}</a></p>
+			<img class='eventPic' src='{{ event.url }}' alt='1'>
+			<p> - {{ event.location }} || {{ event.date | date }} - </p>
+			<a class='btn btn-danger' ng-click='chefCtrl.destroy(event)'>Delete Event</a>
 		</div>
-		<div class='upcoming'>
-			<h3>Your upcoming events:</h3><hr>
-			<div class='eventList' ng-repeat='event in chefCtrl.events | orderBy: "date"'>
-				<img class='eventPic' src='{{ event.url }}' alt='1'>
-				<p><a href='#/chef_one_event/{{ event._id }}'>{{ event.title }}</a></p>
-				<p> - {{ event.location }} || {{ event.date | date }} -
-				<button class='btn btn-xs btn-danger pull-right' ng-click='chefCtrl.destroy(event)'>delete event</button></p>
-			</div>
-
-			<!-- </div> -->
-<!--         <div class='message_board'>
-							<h3>See what people are saying about you!</h3>
-							<div class='message_window'>
-
-									<h4>Name says: user message</h4>
-							</div>
-							<textarea ng-model= 'newMessage.message' rows='6' cols='80'></textarea>
-							<input class='btn btn-success' type='submit' value='Post a Review'>
-			</div> -->
 	</div>
 </div>

@@ -12,22 +12,23 @@ app.controller('ChefController', function(ChefFactory, EventFactory, $location, 
         })
     }
 
-		function getChefEvents(){
-        EventFactory.getChefEvents(function(response){
-            console.log('chef controller', response);
-            that.events = response;
-        })
+	function getChefEvents(){
+    EventFactory.getChefEvents(function(response){
+        console.log('chef controller', response);
+        that.events = response;
+    })
     }
 
-		function getOne($routeParams){
-			EventFactory.getOneEvent($routeParams, function(response){
-				that.event = response;
-				// console.log(response);
-			})
-		}
-		if($routeParams){
-		getOne($routeParams);
-		}
+	function getOne($routeParams){
+		EventFactory.getOneEvent($routeParams, function(response){
+			that.event = response;
+			// console.log(response);
+		})
+	}
+
+	if($routeParams){
+	   getOne($routeParams);
+	}
 
     this.addChef = function(newChef){
         ChefFactory.addNewChef(newChef, function(response){
@@ -66,9 +67,9 @@ app.controller('ChefController', function(ChefFactory, EventFactory, $location, 
     }
 
     this.destroy = function(event){
-      EventFactory.destroy(event, function(response){
-        console.log(response);
-      })
+        EventFactory.destroy(event, function(response){
+            getChefEvents();
+        })
     }
 
     getChefInfo();

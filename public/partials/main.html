@@ -1,12 +1,17 @@
 <nav class="navbar navbar-inverse" id='navigation' role='navigation'>
   <div class="container-fluid">
     <div class="navbar-header" ng-controller='DinerController as dinerCtrl'>
-      <a class="navbar-brand" href="#"><div class='row'><h3 id='diner'>Welcome <span>{{dinerCtrl.diner.name}}</span></h3></div></a>
+      <a class="navbar-brand" href="#">
+        <div class='row'>
+          <h3 id='diner'>Welcome, {{dinerCtrl.diner.name}}</h3>
+        </div>
+      </a>
     </div>
+
     <div>
       <ul id='list' class="nav navbar-nav">
         <!-- <li class="active"><a href="#">Home</a></li> -->
-        <li class='list'><a href=''><input ng-model="search.$" class="glyphicon glyphicon-star" placeholder=' Search'><button type='button' class='btn btn-xs btn-primary'>Filter</button></a></li>
+        <li class='list'><a href=''><input ng-model="search.$" placeholder='Search' style='color: black; border-radius: 5px'><button type='button' class='btn btn-xs btn-primary'>Filter</button></a></li>
         <li class='list'><a href=""><label>Chef: <select ng-model="search.name" >
 						<option ng-repeat='chef in appCtrl.chef' ng-bind='chef'>{{chef}}</option></select></label></a></li>
         <li class='list'><a href=""><label>Cuisine Type: <select  ng-model="search.cuisine" >
@@ -20,7 +25,6 @@
   </div>
 </nav>
 
-		<!-- <a class='col-xs-4 pull-right' href="./#/new_app">Add New Event</a>​ -->
 <div class='container'>
 	<div class='intro' ng-repeat="app in appCtrl.apps | filter: search:strict | orderBy: 'date'">
 	   <div class='col-md-4'>

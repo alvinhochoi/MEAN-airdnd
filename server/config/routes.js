@@ -16,7 +16,7 @@ module.exports = function(app){
 	app.get('/events/:id', function(request, response) { events.getOne(request, response)} );
 	app.post('/events', events.create );
 	app.post('/eventEdit/:id', function(req, res){ console.log(req._id); events.update(req, res)});
-	app.delete('events/:id', events.destroy );
+	app.delete('/events/:id', function(request, response) { events.destroy(request, response)} );
 
 	app.get('/apps', function(request, response) { users.index(request, response) }) /* Index */
 	app.post('/apps', function(request, response) { users.create(request, response);})	 /* Create */

@@ -1,63 +1,14 @@
+#indexView{
+    margin: -20px 0px;
+}
+
+/* Front Page */
 #indexPage{
-    background-image: url("http://www.viralthread.com/wp-content/uploads/2015/06/843.jpg");
-    background-size: 100% 70%;
+    background-image: url(http://www.viralthread.com/wp-content/uploads/2015/06/843.jpg);
+    background-size: cover;
     background-repeat: no-repeat;
-}
-
-.chefPage{
-    background-image: url(http://sharethisnow.co/wp-content/uploads/2015/05/investigar.jpg);
-    background-size: 100% 100%;
-}
-
-.chef_layer{
-    background-color: lightgray;
-    height: 510px;
-    width: 350px;
-    display: inline-block;
-    opacity: 0.8;
-    border-radius: 20px;
-}
-
-.chef_reg{
-    margin-left: 15px;
-    padding: 5px;
-}
-
-.dinerPage{
-    background-image: url(http://i.ytimg.com/vi/oRmpxPwJFw8/maxresdefault.jpg);
-}
-
-.diner_layer{
-    background-color: lightgray;
-    height: 510px;
-    width: 350px;
-    display: inline-block;
-    opacity: 0.8;
-    border-radius: 20px;
-}
-.diner_reg{
-    margin-left: 15px;
-    padding: 5px;
-}
-
-div.head{
-    height: 60px;
-    width: 100%;
-    background-color: black;
-}
-
-div.login{
-    display: inline-block;
-}
-
-#ldiners, #lchefs{
-    display: inline-block;
-    float: right;
-    border-radius: 24px;
-    margin-left: 15px;
-    position: relative;
-    right: 220px;
-    top: 15px;
+    padding: 125px 300px;
+    height: 710px;
 }
 
 .slogan{
@@ -71,153 +22,170 @@ div.login{
 }
 
 .slogan, .slogan2{
-    color: #585858;
+    color: #FF8C00;
     text-align: center;
 }
 
-
 #rdiners, #rchefs{
     display: inline-block;
-    padding: 6px 12px;
-    border-radius: 24px;
-    margin-left: 30px;
-    position: relative;
-    left:400px;
-    top: 15px;
+    margin-left: 20px;
+    width: 100px;
+    font-size: 1.5em;
 }
 
-.slogan{
-margin-top: 100px;
+#rdiners{
+    margin-left: 200px;
 }
 
-div.main{
-    width:1200px;
-    min-height: 700px;
-    position: relative;
-    right: 15px;
+#frontLayer{
+    background-color: lightgray;
+    height: 300px;
+    width: 600px;
+    opacity: 0.9;
+    border-radius: 20px;
 }
 
-div.desc1{
-    width:1200px;
-    height: 700px;
-    position: relative;
-    right: 15px;
+/* Chef Page */
+.chefPage{
+    background-image: url(http://cheftreks.com/wp-content/uploads/2013/06/Chef-Michael-Voltaggio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 680px;    
 }
 
-/*EVENTS*/
+.chef_layer{
+    background-color: lightgray;
+    height: 510px;
+    width: 350px;
+    display: inline-block;
+    opacity: .9;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.chef_reg{
+    margin-left: 15px;
+    padding: 5px;
+}
+
+/* Diner Page */
+.dinerPage{
+    background-image: url(http://i.ytimg.com/vi/oRmpxPwJFw8/maxresdefault.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 680px;
+}
+
+.diner_layer{
+    background-color: lightgray;
+    height: 510px;
+    width: 350px;
+    display: inline-block;
+    opacity: .9;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+.diner_reg{
+    margin-left: 15px;
+    padding: 5px;
+}
+
 /*Main Page*/
 #navigation,.navbar .navbar-inverse {
-  background-image: url(../img/header.jpg);
-  min-height:100px;
-  max-height: 600px;
+    background-image: url(../img/header.jpg);
+    height: 110px;
 }
+
 .list{
-  margin-top: 50px;
+    margin-top: 50px;
 }
-label {
-  color: #3399CC;
-  text-shadow: 1px 1px black;
+
+label{
+    color: #3399CC;
 }
-#diner {
-  margin-left: 20px;
-  margin-top: -2px;
+
+#diner{
+    margin-left: 20px;
+    margin-top: -2px;
 }
+
 .add{
-  text-align: center;
+    text-align: center;
 }
-#search {
-  border: 1px solid black;
-}
-#chefs{
 
+#search{
+    border: 1px solid black;
 }
+
 .error{
-  color:red;
-}
-.title {
-  text-align: center;
-}
-h2 {
-  font-family: sans-serif;
-}
-.name {
-  margin-left: 50px;
-}
-.welcome{
-  margin-left: 50px
+    color:red;
 }
 
-.art {
-  max-width: 90%;
-  min-width: 30%;
-  text-align: center;
+.title{
+    text-align: center;
 }
+
+h2{
+    font-family: sans-serif;
+}
+
+.name{
+    margin-left: 50px;
+}
+
+.welcome{
+    margin-left: 50px
+}
+
+.art{
+    width: 350px;
+    height: 250px;
+    text-align: center;
+}
+
 h6{
-  text-align: center;
+    text-align: center;
 }
+
 .row{
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
-.name {
+
+.name{
   font-family: cursive;
   font-size: 20px;
   color:#0099CC;
 }
-a {
-  color:#993366;
+
+a{
+    color:#993366;
 }
 
 /*events page*/
 /*EVENTS PAGE*/
-div.container{
-    width:1200px;
-    min-height: 1000px;
-}
-div.top_bar{
-    height: 60px;
-    width: 100%;
-    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwwNDA0MDAwMDAwMDAwMDAwMDA8MDAwMFBEWFhQRFBQYHCggGBolHBQUITEhMSk3Li4uFx8zODMsNygtLisBCgoKDAwNDgwMDjcZFBkrLisrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIALEBHAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAAAAQIDBQf/xAAxEAEBAQABAQMHDAMAAAAAAAAAARECAwUGIRIxMnKTsdIEQUJRU1RhgZKy0eEUFiP/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQL/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDyKLiIuNIqKiYYKi4iLgioqJi4CuK4mKgNOLTiy4tYouLiIqA0iozi4qLlPUSnoHaVGkBUsWm0EVnyXaz5IqbUcqdRQTUVVTUC1PIzoMqz5NeUZ2AzqK1sRRUVKqkBFRMVAXDiYqAqLiIuCLi4iLgKi4mLgK4tIzi5VFxURKqUFxURKYLlPUaeqLgRo0RVqbSvJF5Cnaz5UWotQFRTtTaCamqqagQBUBWdO1HKgnkzqqiilUKIAcCoAioIcBUVCioIri0kRxXAXIouJqKioiLgKipUHKC9PUHoL0ajRoL0vKTam0FXkm1OlaB2ptK1NoHanStTagq1NK0tAaVotToFUVVRQTU1VSKmg6ABwjBUVExUEVFRMVAXxaRnFwGkVESrlUVIpMPQMJ0aC9Go09A9Gp0aCtK1OjQFqdFqdA7U2i1NqAtK0tK0BaVpaVoDRpWp0FVFGlaCaBaWighoAzhHAOLiDlEWqJioC4qIlVAXKuVlKuUGsotTpaoenKi0SgvRqdGgrRqdLQXaWp0tA7U2i1NqB2ppWlaApFpWgNK0rU2gdpaVqbRT0rS0tA6RADGkAUZAFHEmC5V6ylVoi5VysdaSguVcrKVcBrpJ0aBgtEA9GlaWgrS1NpaC9LU6m0FWlpanQO0tLSoHpWlU2gdpWlpaKdTQQAgQAwABGAMaQAziTBY1OmByr41mqUGsq5WUp+UI10tTOQtBpKbOVWgdqdFqbQPRqdLygVpanS0FaVqdLQXpVOjQFKnU0UECACgARGAIAADIAYAAjKkCtGkAXo1JguU9Z6qUFaepANJyPymeiUGmlqdGiHaWi1NFPRpFoHS0tID0anRoK0anRoHSBAZkAAAAEAAAMAZGBUjwYBA8PAIwAAgAGNBArS0iBenrM9BelanS0Fam0tAHpaCAyAAAADBADAAAyAAAAAAC8BgCwYYAsCgCRisICJQwEg7CAgZAAAAIwBAyAQyGgKRkAAAAAgMyAGCMAAAABgsyAGCAGCMAAWgYhDQOpPSoERkAAAAEAMFoAAgABBAAAAAABwhuAdDr8e7HaFkv+PmyXOXW6PG5ZvjLy8DvdftH7vPb9H4gccOt/rPy/wCx4+36Pxfgc7s9oXxnQ42eHm6/R+fzfSByZQ607s9oXLOhLLNn/fo+M/Uvj3V7Ss2fJtn1zrdGz9yjlEAAAAAwABAAAAAKgAKVAAgAAIwAIAAQCAAAAAAAAAT1fR5erfcQB7f0/Rnq8fcrj5r+QAH/AAn+gAMwAf/Z);
-}
-#leave{
-    display: inline-block;
-    float: right;
-    border-radius: 24px;
-    margin-left: 15px;
-    position: relative;
-    right: 220px;
-    top: 15px;
-}
+
 .head_pic{
     height: 180px;
-    width: 100%;
 }
+
 .left_bar{
     margin: 10px;
-    padding: 10px;
     width: 270px;
     height: 600px;
+}
+
+.content{
+    margin-top:38px;
+    padding: 10px;
+    width: 800px;
+    height: 600px;
+}
+
+.content, .left_bar{
     display: inline-block;
     vertical-align: top;
 }
-.content{
-    margin: 10px;
-    padding: 10px;
-    width: 850px;
-    height: 600px;
-    display: inline-block;
-}
-.chef_pic{
-    width: 240px;
-    height: 220px;
-    margin-left: 5px;
-    margin-top: 5px;
-    outline: 2px solid black
-}
-.chef_pic img {
-    width: 240px;
-    height: 220px;
 
-}
 .chef_info{
     width: 240px;
     height: 320px;
@@ -226,15 +194,18 @@ div.top_bar{
     outline: 2px solid black;
     background-image: url(http://1942design.com/graphics/paper.jpg);
 }
+
 .chef_info h3{
     text-align: center;
     padding-top:10px;
     color: #993366;
 }
+
 .chef_info h4{
     padding: 5px;
     font-family: cursive;
 }
+
 .chef_info p{
     margin-top: 10px;
     display: inline-block;
@@ -242,232 +213,150 @@ div.top_bar{
     font-family: fantasy;
     font-size: 20px;
 }
+
 .chef_block{
     background-color: black;
     height:46px;
     width: 240px;
 }
+
 .name_block, .location_block, .specialty_block{
-    background-color: lightgray;
     height: 30px;
     width: 240px;
 }
+
 .event_detail, .event_detail h3{
     height: 50px;
     width: 850px;
     display: inline-block;
     vertical-align: top;
 }
+
 .event_detail{
     position: relative;
     right: 10px;
     bottom: 10px;
     background-color: black;
 }
+
 .event_detail h3{
     color: #993366;
     margin-left: 10px;
     margin-top: 10px;
 }
-.event_pic{
-    width: 400px;
-    height: 250px;
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
+
+.event_info, .event_price{
     display: inline-block;
     vertical-align: top;
 }
+
 .event_info{
-    width: 400px;
+    width: 350px;
     height: 250px;
     margin-top: 7px;
     margin-left: 5px;
-    display: inline-block;
-    vertical-align: top;
     padding: 10px;
     outline: 1px solid black;
     text-align: center;
     background-image: url(http://www.castlehillinn.com/images/header-foodwine.jpg);
 }
+
 .event_info h5{
     margin-left: 25px;
     text-align: center;
 }
+
 .event_info h4{
-  color: #0099CC;
-text-shadow: 1px 1px navy;
+    color: #0099CC;
 }
+
 .event_price{
     width: 400px;
     height: 250px;
     margin-top: 7px;
-    margin-left: 5px;
-    display: inline-block;
-    vertical-align: top;
+    margin-left: 15px;
     padding: 10px;
     text-align: center;
     outline: 1px solid black;
     background-image: url(http://www.restaurants-chefs.com/wp-content/uploads/2012/01/03Carpaccio-cepes.jpg);
     color: #3399CC;
-    text-shadow: 1px 1px white;
     font-weight: bold;
-    font-family: serif;
+    font-family: sans-serif;
 }
-div.event_price button{
-    margin-top: 15px;
-}
+
 .event_price h1{
     font-size: 60px;
 }
-.event_price h6{
-    font-size: 24px;
-}
+
 .events_background{
-  background-image: url(http://www.webdesignburn.com/wp-content/uploads/2015/04/Grey-Texture-Background-and-Wallpaper-16.jpg);
+    background-image: url(http://www.webdesignburn.com/wp-content/uploads/2015/04/Grey-Texture-Background-and-Wallpaper-16.jpg);
 }
+
 .event_capacity{
-    width: 400px;
+    width: 350px;
     height: 250px;
-    float: right;
-    margin-top: 7px;
-    margin-right: 5px;
-    display: inline-block;
-    vertical-align: top;
+    margin-left: 5px;
     outline: 1px solid black;
     background-image: url(http://res-5.cloudinary.com/eatwith/image/upload/c_fill,f_auto,h_245,q_90,w_409/v1/user_073058/image_3_1429358192.jpg);
 }
+
 .event_capacity h4{
-color: white;
-font-size: 20px;
-font-family: fantasy;
-text-align: center;
-text-shadow: 1px 1px black;
-text-decoration: underline;
+    color: white;
+    font-size: 20px;
+    font-family: fantasy;
+    text-align: center;
+    text-shadow: 1px 1px black;
+    text-decoration: underline;
 }
 
 /*Chef DASHBOARD*/
-.chef_homepage{
-  background-image: url("https://www.pritikin.com/wp/wp-content/uploads/2015/03/healthy-cooking-secrets-20.jpg.pagespeed.ce.__d7iosF0N.jpgg");
-  background-size: 100% 100%;
-  margin-top: -10px;
-  height: 1200px;
-  width: 100%;
-      vertical-align: center;
+.head_bar{
+    height: 60px;
+    width: 100%;
+    background-color: black;
 }
-  .container{
-      width:1200px;
-      min-height: 1000px;
-  }
-div.head_bar{
-      height: 60px;
-      width: 100%;
-      background-color: black;
-  }
-  div.head_bar h1{
-    display: inline-block;
-    color: white;
-    padding: 5px;
-    margin-left: 200px;
-    margin-top: 7px;
-  }
-  #create_new {
-    margin-top: 15px;
-  }
-  #leaving{
-      display: inline-block;
-      float: right;
-      border-radius: 24px;
-      margin-left: 15px;
-      position: relative;
-      right: 360px;
-      top: 15px;
-  }
-  div.bio_location{
-      background-color: white;
-      opacity: 0.85;
-      border-radius: 20px;
-    height: 400px;
-    width: 700px;
-    margin-left: 20px;
-    margin-top: 30px;
-    display: inline-block;
-    vertical-align: top;
-      padding-left: 20px;
-  }
-  .loc{
-    margin-left: 30px;
-    display: inline-block;
-  }
-  #clicker{
-    margin-left: 400px;
-      position: relative;
-      bottom:  40px;
-  }
-  .affirm{
-    margin-left: 30px;
-  }
-  .bio_spot{
-    border-radius: 15px;
-    border: 2px solid black;
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 30px;
-  }
-  div.upcoming{
-      background-color: white;
-      opacity: 0.85;
-      border-radius: 20px;
-    width: 400px;
-    height: 400px;
-    float: right;
-    margin-top: 30px;
-    margin-right: 20px;
-    border-radius: 15px;
-    padding-left: 15px;
-      padding-right: 15px;
-      padding-top: 5px;
-  }
-  div.upcoming a{
-      margin-top: 150px;
-      margin-left: 110px;
-  }
-  div.eventList{
-      margin-top: 30px;
-  }
-  div.message_board{
-      background-color: white;
-      opacity: 0.8;
-      border-radius: 20px;
-      height:550px;
-      width: 80%;
-      margin-top: 40px;
-      padding: 10px;
-      margin-left: 90px;
-      border-radius: 25px;
-  }
-  .message_window{
-      height: 270px;
-      width: 810px;
-      margin-left: 50px;
-      margin-top: 30px;
-      background: white;
-      border: 2px solid black;
-      border-radius: 15px;
-  }
-  div.message_board textarea{
-      margin-top: 30px;
-      margin-left: 50px;
-      padding: 5px;
-      border: 2px solid black;
-      border-radius: 15px;
-  }
-  div.message_board h3{
-      margin-left: 50px;
-  }
-  div.message_board input{
-      margin-left: 50px;
-      margin-bottom: 50px;
-  }
 
-  /*CREATE EVENT*/
+    .head_bar h1{
+        display: inline-block;
+        color: white;
+        padding: 5px;
+        margin-left: 50px;
+        margin-top: 7px;
+    }
+
+    #create_new {
+        margin: 15px 40px 0px 0px;
+    }
+
+    .bio_spot{
+        border-radius: 15px;
+        border: 2px solid black;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 30px;
+    }
+
+    .bio_location{
+        background-color: white;
+        height: 400px;
+        width: 700px;
+        margin-left: 20px;
+        margin-top: 30px;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 20px;
+    }
+
+    .loc{
+        border-radius: 10px;
+        padding-left: 5px;
+    }
+
+    .affirm{
+        color: blue;
+    }
+
+    .eventPic{
+        width: 250px;
+        height: 200px;
+    }

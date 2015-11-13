@@ -6,10 +6,8 @@
     font-family: serif;
   }
 </style>
-  <div class='events_background'>
-        <div class='top_bar'>
-          <a href="#/main">Back to Mainpage</a>
-        </div>
+    <div class='events_background'>
+        <a href="#/main">Back to Mainpage</a>
 
         <div class="container">
             <div class='head_pic'>
@@ -17,25 +15,22 @@
             </div>
 
             <div class='left_bar'>
-                <div class='chef_pic'>
-                    <img src="{{ chefCtrl.event.pic}}">
-                </div>
                 <div class='chef_info'>
                     <div class='chef_block'>
                         <h3>Meet Your Chef!</h3>
                     </div>
-                        <div class='name_block'>
-                            <h4>Chef Name:</h4>
-                        </div>
-                            <p>{{ chefCtrl.chef.first_name}}</p>
-                        <div class='location_block'>
-                            <h4>Chef Location:</h4>
-                        </div>
-                            <p>{{ chefCtrl.chef.location }}</p>
-                        <div class='specialty_block'>
-                            <h4>Chef Specialty:</h4>
-                        </div>
-                            <p>{{ chefCtrl.event.cuisine }}</p>
+                    <div class='name_block'>
+                        <h4>Chef Name:</h4>
+                    </div>
+                        <p>{{ chefCtrl.chef.first_name}}</p>
+                    <div class='location_block'>
+                        <h4>Chef Location:</h4>
+                    </div>
+                        <p>{{ chefCtrl.chef.location }}</p>
+                    <div class='specialty_block'>
+                        <h4>Chef Specialty:</h4>
+                    </div>
+                    <p>{{ chefCtrl.event.cuisine }}</p>
                 </div>
             </div>
 
@@ -45,94 +40,20 @@
                 </div>
                 <div class='event_info'>
                     <h4>Event Date:</h4>
-                      <h5>{{ chefCtrl.event.date | date }}</span></h4>
+                        <h5>{{ chefCtrl.event.date | date }}</h5>
                     <h4>Event Time: </h4>
-                      <h5>{{ chefCtrl.event.time | date: 'shortTime' }}</h5>
+                        <h5>{{ chefCtrl.event.time | date: 'shortTime' }}</h5>
                     <h4>Menu Item:</h4>
                         <h5>{{ chefCtrl.event.menu }}</h5>
-                </div>
-                <div id="googleMap" style="width:400px;height:250px;" class='event_pic'>
-
                 </div>
                 <div class ='event_price'>
                     <h4 class='des'>Event Description</h4>
                     <h4>{{chefCtrl.event.description}}</h4>
                     <h1 class='des'> ${{ chefCtrl.event.price }} /per guest</h1>
-                    <a href="#">Reserve Your Seat</a>
                 </div>
                 <div class='event_capacity'>
                     <h4>People Going</h4>
                 </div>
-
             </div>
-            <hr>
-
         </div>
-        <a href='#/chef_dashboard'>Go back</a>
     </div>
-
-
-
-<!-- <div class='events_background'>
-    <div class='top_bar'>
-        <button id='leave' class= 'btn btn-success'><a href="#/"></a>Logout</button>
-    </div>
-
-    <div class="container">
-        <div class='head_pic'>
-            <img src="http://www.burwellscharleston.com/images/headers/Indoor-Dining-Header-top.jpg" width='100%' height='100%'>
-        </div>
-
-        <div class='left_bar'>
-            <div class='chef_pic'>
-                <img src="{{chefCtrl.event.url}}">
-            </div>
-            <div class='chef_info'>
-                <div class='chef_block'>
-                    <h3>Meet Your Chef!</h3>
-                </div>
-                    <div class='name_block'>
-                        <h4>Chef Name:</h4>
-                    </div>
-                        <p class='infos'>{{chefCtrl.chef.first_name}}</p>
-                    <div class='location_block'>
-                        <h4>Chef Location:</h4>
-                    </div>
-                        <p class='infos'>{{chefCtrl.event.location}}</p>
-                    <div class='specialty_block'>
-                        <h4>Chef Specialty:</h4>
-                    </div>
-                        <p class='infos'>{{chefCtrl.event.cuisine}}</p>
-            </div>
-        </div>
-        <div class='content'>
-            <div class='event_detail'>
-                <h3>Event Details - {{chefCtrl.event.title}}</h3>
-            </div>
-            <div class='event_info'>
-                <h4>Date:</h4>
-                    <h5>{{chefCtrl.event.date | date:'mediumDate'}}</h5>
-                <h4>Event Time:</h4>
-                    <h5>{{chefCtrl.event.time | date: 'shortTime'}}</h5>
-                <h4>Duration:</h4>
-                    <h5>{{chefCtrl.event.duration}} hrs</h5>
-                <h4>Menu Item:</h4>
-                    <h5>{{chefCtrl.event.menu}}</h5>
-            </div>
-            <div id="googleMap" style="width:400px;height:250px;" class='event_pic'>
-
-            </div>
-            <div class ='event_price'>
-                <h1>$ {{chefCtrl.event.price}}</h1>
-                <h6>/per guest</h6>
-                <button class='btn btn-danger'>Reserve your seat</button>
-            </div>
-            <div class='event_capacity'>
-                <h4>People Attending</h4>
-            </div>
-
-        </div>
-        <hr>
-
-    </div>
-</div> -->

@@ -4,12 +4,10 @@ app.factory('ChefFactory', function($http){
 
 	factory.chefInfo = function(callback){
 		$http.get('/getChef').success(function(response){
-			console.log('reloading', response);
 			chef = response;
 			callback(response);
 		})
 	}
-
 
 	factory.addNewChef = function(newChef, callback){
 		$http.post('/chefs', newChef).success(function(response){
@@ -35,8 +33,6 @@ app.factory('ChefFactory', function($http){
 			callback();
 		})
 	}
-
-
 
 	return factory;
 })
